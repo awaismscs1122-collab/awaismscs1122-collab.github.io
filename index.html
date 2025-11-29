@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awais Karni | Designer & Developer</title>
+    <meta name="description" content="Awais Karni - Designer, Developer, Tester, Scraper based in Pakistan.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['IBM Plex Serif', 'serif'],
+                        mono: ['Space Mono', 'monospace'],
+                    },
+                    colors: {
+                        paper: '#FAFAF9', // Stone 50
+                        ink: '#1C1917',   // Stone 900
+                        subtle: '#78716C', // Stone 500
+                        accent: '#E7E5E4', // Stone 200
+                    },
+                    animation: {
+                        'fade-up': 'fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        fadeUp: {
+                            '0%': { opacity: 0, transform: 'translateY(20px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAFAF9; /* paper */
+            color: #1C1917; /* ink */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Custom Selection Color */
+        ::selection {
+            background: #E7E5E4; /* accent */
+            color: #000;
+        }
+
+        /* Hide scrollbar for cleaner look but keep functionality */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #D6D3D1;
+            border-radius: 20px;
+        }
+
+        /* Animation Utility Class managed by JS */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Link Hover Effect */
+        .hover-link {
+            position: relative;
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+        .hover-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #1C1917;
+            transform-origin: bottom right;
+            transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+        }
+        .hover-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
+</head>
+<body class="relative">
+
+    <!-- Sticky Header -->
+    <nav class="fixed top-0 left-0 w-full px-6 py-6 md:px-12 md:py-8 z-50 flex justify-between items-center mix-blend-difference text-white pointer-events-none">
+        <!-- Using mix-blend-difference allows text to be visible on both light and dark sections -->
+        <a href="#" class="font-sans font-bold text-xl tracking-tighter pointer-events-auto hover:opacity-70 transition-opacity">AK</a>
+        <a href="#contact" class="font-mono text-xs md:text-sm uppercase tracking-widest pointer-events-auto hover:underline underline-offset-4">Get in Touch</a>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-6 md:px-12 pt-32 md:pt-48 pb-24">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="mb-32 md:mb-48 reveal-on-scroll">
+            <h1 class="font-sans font-semibold text-5xl md:text-7xl leading-[1.1] tracking-tight mb-8">
+                Awais Karni
+            </h1>
+            <p class="font-serif text-xl md:text-2xl text-subtle leading-relaxed max-w-xl mb-12">
+                Designer, Developer, Tester, & Scraper based in Pakistan. Building beautiful, functional, and fair digital systems.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-6 md:gap-12 font-mono text-sm text-subtle">
+                <div class="flex flex-col gap-2">
+                    <span class="uppercase tracking-widest text-xs opacity-50">Location</span>
+                    <span>Islamabad / Rawalpindi</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="uppercase tracking-widest text-xs opacity-50">Contact</span>
+                    <div class="flex flex-col gap-1">
+                        <a href="mailto:hereyouth@gmail.com" class="hover:text-ink transition-colors">hereyouth@gmail.com</a>
+                        <a href="tel:+923038001804" class="hover:text-ink transition-colors">(+92) 303 8001804</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="uppercase tracking-widest text-xs opacity-50">Social</span>
+                    <a href="https://www.freelancer.com/u/awaisahmedkarni" target="_blank" class="hover:text-ink transition-colors underline decoration-1 underline-offset-2">Freelancer Profile ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-gray-200 mb-24 w-12 ml-0 reveal-on-scroll">
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="mb-32 reveal-on-scroll">
+            <h2 class="font-sans font-medium text-sm uppercase tracking-widest mb-12 text-subtle">Work Experience</h2>
+
+            <!-- Job 1 -->
+            <div class="mb-16 group">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
+                    <h3 class="font-sans font-semibold text-2xl text-ink group-hover:text-subtle transition-colors">Quality Control Analyst</h3>
+                    <span class="font-mono text-xs text-subtle mt-1 md:mt-0">Nov 2022 — May 2023</span>
+                </div>
+                <div class="mb-6 font-serif italic text-lg text-subtle">NorthBay Solutions, Islamabad</div>
+                <ul class="font-serif text-base text-ink leading-relaxed space-y-3 list-none pl-0">
+                    <li>— Participated in Agile engineering processes for project development.</li>
+                    <li>— Utilized JIRA for sprint management and task tracking.</li>
+                    <li>— Conducted API testing using Postman.</li>
+                    <li>— Maintained documentation and client updates via Google Spreadsheets.</li>
+                </ul>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="group">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4">
+                    <h3 class="font-sans font-semibold text-2xl text-ink group-hover:text-subtle transition-colors">Digital Solutions Expert</h3>
+                    <span class="font-mono text-xs text-subtle mt-1 md:mt-0">Dec 2015 — Present</span>
+                </div>
+                <div class="mb-6 font-serif italic text-lg text-subtle">Freelancer.com, Rawalpindi</div>
+                <ul class="font-serif text-base text-ink leading-relaxed space-y-3 list-none pl-0">
+                    <li>— Designed visuals and brand assets to strengthen client identity.</li>
+                    <li>— Built responsive, user-friendly websites.</li>
+                    <li>— Scraped & analyzed data using Python tools.</li>
+                    <li>— Performed QA testing to ensure smooth functionality.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section id="education" class="mb-32 reveal-on-scroll">
+            <h2 class="font-sans font-medium text-sm uppercase tracking-widest mb-12 text-subtle">Education</h2>
+
+            <!-- Master's -->
+            <div class="mb-12">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                    <h3 class="font-sans font-medium text-xl">Master of Computer Science</h3>
+                    <span class="font-mono text-xs text-subtle">2021 — 2024</span>
+                </div>
+                <div class="text-subtle font-serif mb-2">International Islamic University Islamabad</div>
+                <div class="font-mono text-xs text-subtle">Grade: B+ &nbsp;|&nbsp; Credits: 30</div>
+            </div>
+            
+
+            <!-- Bachelor's -->
+            <div class="mb-12">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                    <h3 class="font-sans font-medium text-xl">Bachelor of Computer Science</h3>
+                    <span class="font-mono text-xs text-subtle">2016 — 2020</span>
+                </div>
+                <div class="text-subtle font-serif mb-2">International Islamic University Islamabad</div>
+                <div class="font-mono text-xs text-subtle">Grade: B &nbsp;|&nbsp; Credits: 134</div>
+            </div>
+
+            <!-- Training -->
+            <div>
+                <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                    <h3 class="font-sans font-medium text-xl">Software QA Training</h3>
+                    <span class="font-mono text-xs text-subtle">2022</span>
+                </div>
+                <div class="text-subtle font-serif">TechLift, Islamabad</div>
+            </div>
+        </section>
+
+        <!-- PUBLICATION SECTION (Highlight) -->
+        <section id="publication" class="mb-32 reveal-on-scroll">
+            <h2 class="font-sans font-medium text-sm uppercase tracking-widest mb-12 text-subtle">Selected Publication</h2>
+            
+            <a href="https://peerj.com/articles/cs-3171/" target="_blank" class="block group border-l-2 border-transparent hover:border-black pl-0 hover:pl-6 transition-all duration-500 ease-out">
+                <h3 class="font-sans font-semibold text-2xl md:text-3xl leading-tight mb-4 group-hover:underline decoration-1 underline-offset-4">
+                    Skin Cancer Classification Using Novel Fairness-Based Federated Learning Algorithm
+                </h3>
+                <p class="font-mono text-xs uppercase tracking-wide text-subtle mb-6">
+                    PeerJ Computer Science, 2025 &nbsp;•&nbsp; Karni A, Abbas Q, Ahmad J, Saudagar A.K.J
+                </p>
+                <p class="font-serif text-base text-ink max-w-xl leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">
+                    Developed a class-weighted federated averaging algorithm to address data imbalance, achieving ~92% accuracy on the Fitzpatrick 17k dataset. The study improves diagnostic fairness and reliability in privacy-preserving medical AI.
+                </p>
+                <div class="mt-6 flex items-center gap-2 font-sans text-sm font-medium">
+                    Read Paper <span class="transition-transform group-hover:translate-x-1">→</span>
+                </div>
+            </a>
+        </section>
+
+        <!-- SKILLS & LANGUAGES -->
+        <section id="skills" class="mb-32 reveal-on-scroll">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Skills -->
+                <div>
+                    <h2 class="font-sans font-medium text-sm uppercase tracking-widest mb-8 text-subtle">Technical Skills</h2>
+                    <ul class="font-serif text-lg space-y-2">
+                        <li>Web Design & Development</li>
+                        <li>Graphic Design</li>
+                        <li>Website Testing (QA)</li>
+                        <li>Data Scraping <span class="font-mono text-xs text-subtle bg-gray-200 px-1 rounded">Python</span></li>
+                        <li>Data Entry & Manipulation</li>
+                    </ul>
+                </div>
+                
+                <!-- Languages -->
+                <div>
+                    <h2 class="font-sans font-medium text-sm uppercase tracking-widest mb-8 text-subtle">Languages</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="font-sans font-medium text-lg">Urdu</div>
+                            <div class="font-mono text-xs text-subtle">Native Proficiency</div>
+                        </div>
+                        <div>
+                            <div class="font-sans font-medium text-lg">English</div>
+                            <div class="font-mono text-xs text-subtle">Intermediate (B1–B2)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CONTACT FOOTER -->
+    <footer id="contact" class="bg-[#F5F5F4] px-6 md:px-12 py-24 md:py-32">
+        <div class="max-w-3xl mx-auto reveal-on-scroll">
+            <h2 class="font-sans font-bold text-4xl md:text-5xl mb-8 tracking-tight">Let’s collaborate.</h2>
+            <p class="font-serif text-xl text-subtle mb-12 max-w-lg">
+                Available for freelance projects and full-time roles.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 font-mono text-sm">
+                <div>
+                    <span class="block text-xs uppercase tracking-widest text-subtle mb-2">Email</span>
+                    <a href="mailto:hereyouth@gmail.com" class="text-lg border-b border-black/20 hover:border-black pb-1 transition-colors">hereyouth@gmail.com</a>
+                </div>
+                <div>
+                    <span class="block text-xs uppercase tracking-widest text-subtle mb-2">Phone</span>
+                    <a href="tel:+923038001804" class="text-lg border-b border-black/20 hover:border-black pb-1 transition-colors">(+92) 303 8001804</a>
+                </div>
+            </div>
+            
+            <div class="mt-24 text-xs font-mono text-subtle flex justify-between items-end">
+                <div>
+                    &copy; 2025 Awais Karni.<br>
+                    All rights reserved.
+                </div>
+                <a href="#hero" class="hover:text-ink transition-colors">Back to Top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts for Interactions -->
+    <script>
+        // Intersection Observer for Fade-in on Scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            const elements = document.querySelectorAll('.reveal-on-scroll');
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
