@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 100 100"
+     width="100"
+     height="100"
+     role="img"
+     aria-labelledby="title desc"
+     preserveAspectRatio="xMidYMid meet">
+  <title id="title">AK monogram</title>
+  <desc id="desc">Bold white letters "AK" centered on a dark rectangular background.</desc>
+
+  <!-- background -->
+  <rect x="0" y="0" width="100" height="100" fill="#1C1917"/>
+
+  <!-- centered text -->
+  <text x="50%" y="50%"
+        font-family="sans-serif"
+        font-size="50"
+        font-weight="700"
+        text-anchor="middle"
+        dominant-baseline="central"
+        fill="#FAFAF9">AK</text>
+</svg>
